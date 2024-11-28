@@ -1,32 +1,22 @@
-let displayValue = '';
+const display = document.getElementById('display');
 
 function appendValue(value) {
-    const display = document.getElementById('display');
-    if (display.innerText === '0') {
-        display.innerText = value;
-    } else {
-        display.innerText += value;
-    }
-    displayValue = display.innerText;
+    display.value += value;
 }
 
 function clearDisplay() {
-    displayValue = '';
-    document.getElementById('display').innerText = '0';
+    display.value = '';
 }
 
 function deleteLast() {
-    const display = document.getElementById('display');
-    displayValue = display.innerText.slice(0, -1);
-    display.innerText = displayValue || '0';
+    display.value = display.value.slice(0, -1);
 }
 
-function calculate() {
+function calculateResult() {
     try {
-        displayValue = eval(displayValue).toString();
-        document.getElementById('display').innerText = displayValue;
-    } catch (e) {
-        document.getElementById('display').innerText = 'Error';
-        displayValue = '';
+        display.value = eval(display.value);
+    } catch (error) {
+        display.value = 'Error';
     }
 }
+
