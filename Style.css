@@ -5,53 +5,49 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f9;
+    background-color: #f4f4f4;
 }
 
 .calculator {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.display {
-    background: #222;
-    color: #fff;
-    font-size: 2rem;
-    text-align: right;
+    background: #00264d;
     padding: 20px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 250px;
 }
 
-.buttons {
+.calculator-display {
+    background: white;
+    border: none;
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.calculator-buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: #ddd;
+    gap: 10px;
 }
 
-button {
-    background: #f1f1f1;
-    border: none;
-    font-size: 1.5rem;
-    padding: 20px;
-    cursor: pointer;
-    outline: none;
-}
-
-button:hover {
-    background: #e0e0e0;
-}
-
-button:nth-child(16) {
-    background: #ff9800;
+.button {
+    background: #004080;
     color: white;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 10px 0;
+    cursor: pointer;
 }
 
-button:nth-child(16):hover {
-    background: #fb8c00;
+.button:active {
+    background: #003366;
+}
+
+.wide {
+    grid-column: span 2;
 }
