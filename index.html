@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link CSS file -->
+    <link rel="stylesheet"  type="text/css" href="style.css">
+</head>
+<body>
+    <h1 id="heading"><u>Calculator</u></h1>
+    <div class="container">
+        <div class="calculator">
+            <div class="screen">
+                <p id="ans"></p>
+            </div>
+            <div class="buttons">
+                <div class="row1">
+                    <button id="clear" onclick="ac()">AC</button>
+                    <button id="del" onclick="dl()">DEL</button>
+                    <button id="opt" onclick="operand('%')">%</button>
+                    <button id="opt" onclick="operand('/')">/</button>
+                </div>
+                <div class="row2">
+                    <button id="oper" onclick="operand('7')">7</button>
+                    <button id="oper" onclick="operand('8')">8</button>
+                    <button id="oper" onclick="operand('9')">9</button>
+                    <button id="opt" onclick="operand('*')">*</button>
+                </div>
+                <div class="row3">
+                    <button id="oper" onclick="operand('4')">4</button>
+                    <button id="oper" onclick="operand('5')">5</button>
+                    <button id="oper" onclick="operand('6')">6</button>
+                    <button id="opt" onclick="operand('-')">-</button>
+                </div>
+                <div class="row4">
+                    <button id="oper" onclick="operand('1')">1</button>
+                    <button id="oper" onclick="operand('2')">2</button>
+                    <button id="oper" onclick="operand('3')">3</button>
+                    <button id="opt" onclick="operand('+')">+</button>
+                </div>
+                <div class="row5">
+                    <button id="oper" onclick="operand('00')">00</button>
+                    <button id="oper" onclick="operand('0')">0</button>
+                    <button id="oper" onclick="operand('.')">.</button>
+                    <button id="equal" onclick="result()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Link JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
